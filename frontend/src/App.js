@@ -1,7 +1,25 @@
-function App() {
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useAuthContext } from "./hooks/useAuthContext";
+
+// Pages & Components
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
+function App() {  
+  const { user } = useAuthContext();
+
   return (
-    <div className="bg-neutral-900 h-screen">
-      <span className="text-white inline-block align-middle">Hello World!</span>
+    <div className="">
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={user ? <Home /> : <Navigate to="/login"/>} />
+          <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
+          <Route path="/signup" element={user ? <Navigate to="/" /> : <Signup />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

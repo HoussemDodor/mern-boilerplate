@@ -1,37 +1,38 @@
 # MERN boilerplate for new projects
 TODO: A short intro about this project
 
-## About MERN
+#### About MERN
 TODO: explain what mern is and why i've chosen it
 
-# List of features
+## List of features
 This is a list of features integrated in the Mern boilerplate
 
-### to be added
+#### Features to be implemented
 * User profile page
 * Add Refreshtoken
 * Add OAuth functionality
 * 
 
-
-### Implemented
+#### Implemented
 * Login & Signup functionaly
     * Uses JWTtoken
     * Passwords are salted and hashed
 
 
 ## How to set up
-This documents explains how to use the boilerplate and what steps need to be taken before the start of development
+The following steps explain how to get the boilerplate running on your local machine and start developing.
 
-
-### Running Npm install
-
-### Add .env file
-
-### Naming your project
+#### Cloning and connecting your own repository
+#### Running Npm install
+#### Add .env file
+#### Naming your project
 
 ## How to deploy the MERN app
-This is a guide which includes all the steps that need to taken to deploy your Mern application to the web. 
+The following steps explain how to deploy the MERN app
 
-### Optimize tailwind for production
+#### Create a new branch in your repository and name it "production"
+
+#### (optional) Set up CI/CD pipeline in github
+
+#### Optimize tailwind for production
 https://tailwindcss.com/docs/optimizing-for-production 

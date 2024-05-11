@@ -11,7 +11,7 @@ This is a list of features integrated in the Mern boilerplate
 * User profile page
 * Add Refreshtoken
 * Add OAuth functionality
-* 
+* Add Testing
 
 #### Implemented
 * Login & Signup functionaly

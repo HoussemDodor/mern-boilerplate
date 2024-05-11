@@ -11,7 +11,7 @@ function App() {
   const { user } = useAuthContext();
 
   return (
-    <div className="">
+    <div className="bg-[#F1F1F1]">
       <BrowserRouter>
         <Navbar />
         <Routes>

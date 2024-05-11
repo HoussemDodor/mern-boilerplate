@@ -18,17 +18,17 @@ const Login = () => {
     setIsLoading(true);
     setError(null);
 
-    axios.post("/api/user/login", {email, password}).then((res) => {
+    axios.post("/api/auth/login", {email, password}).then((res) => {
       if (res.status === 200) {      
         localStorage.setItem("user", JSON.stringify(res.data));
         dispatch({ type: "LOGIN", payload: res.data });  
         setIsLoading(false);
       }
     })
-    .catch((err) => {
-      console.log(err)
+    .catch((err) => {      
+      console.log(err) // REMOVE LATER
       setIsLoading(false);
-      setError(err.mesage);
+      setError(err.response?.data?.error ? err.response.data.error : err.message);
     })
   };
   return (

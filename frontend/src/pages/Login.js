@@ -39,7 +39,7 @@ const Login = () => {
         <div className="sm:w-1/2 px-16">
           <h2 className="font-bold text-2xl">Login</h2>
           <p className="text-sm mt-4">
-            If you are already have an account, easily log in
+            If you already have an account, easily log in
           </p>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-2">

@@ -26,7 +26,6 @@ const Login = () => {
       }
     })
     .catch((err) => {      
-      console.log(err) // REMOVE LATER
       setIsLoading(false);
       setError(err.response?.data?.error ? err.response.data.error : err.message);
     })

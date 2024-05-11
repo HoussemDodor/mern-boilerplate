@@ -1,7 +1,7 @@
 const Home = () => {
   return (
-    <div className="h-screen flex items-center">
-      <span className="text-white text-2xl">Hello World!</span>
+    <div className="bg-gray-50 h-screen flex justify-center items-center">
+      <span className="text-black text-5xl">Hello World!</span>
     </div>
   );
 };

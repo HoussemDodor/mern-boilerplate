@@ -14,13 +14,17 @@ This is a list of features integrated in the Mern boilerplate
 * Add Testing
 * Make everything in the frontend fully responsive
 * Add material svg
-* Add static page to the backend
 * Add profile picture to each user with default profile pic
+* Add authorization based on roles
 
 #### Implemented
+##### Frontend
 * Login & Signup functionality
     * Uses JWTtoken
     * Passwords are salted and hashed
+
+##### Backend
+* Serves a static page when accessed through a browser
 
 
 ## How to set up

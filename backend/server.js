@@ -22,6 +22,10 @@ const requestLogger = require("./middleware/requestLogger")
 //  Uses
 //
 const app = express();
+app.use( express.static( 'public' ));
+app.get( "/", ( req, res ) => {
+  res.sendFile( path.join( __dirname + "/public/index.html" ));
+});
 
 // Middleware
 app.use(express.json());

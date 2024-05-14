@@ -15,12 +15,20 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    role: {
+      type: String,
+      required: true,
+      default: "user",
+    }
   },
   { timestamps: true }
 );
 
 // Static signup method
 userSchema.statics.signup = async function (email, password) {
+  // First make email all lowercase
+  email = email.toLowerCase();
+
   //Check if fields are empty
   if (!email || !password) throw Error("All fields must be filled");
 
@@ -28,10 +36,10 @@ userSchema.statics.signup = async function (email, password) {
   if (!validator.isEmail(email)) throw Error("Email is not valid");
 
   //Check password
-  if (!validator.isStrongPassword(password))
-    throw Error("Password is not strong enough");
+  //if (!validator.isStrongPassword(password))
+  //  throw Error("Password is not strong enough");
 
-  // CHeck if the email is already in use
+  // Check if the email is already in use
   const exists = await this.findOne({ email });
   if (exists) throw Error("Email already in use");
 
@@ -45,6 +53,9 @@ userSchema.statics.signup = async function (email, password) {
 
 // Login method
 userSchema.statics.login = async function (email, password) {
+  // First make email all lowercase
+  email = email.toLowerCase();
+
   //Check if fields are empty
   if (!email || !password) throw Error("All fields must be filled");
 

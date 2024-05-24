@@ -30,7 +30,7 @@ const Signup = () => {
   };
 
   return (
-    <section className="bg-gray-50 min-h-screen flex items-center justify-center">
+    <section className="bg-gray-50 min-h-[90vh] flex items-center justify-center">
       {/* Login container */}
       <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl py-5">
         {/* form */}

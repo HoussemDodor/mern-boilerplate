@@ -1,9 +1,15 @@
 const User = require("../models/userModel");
 const { sign } = require("jsonwebtoken");
+const bcrypt = require('bcrypt')
 
 const createToken = (_id) => {
   return sign({ _id }, process.env.ACCES_TOKEN_SECRET, { expiresIn: "3d" });
 };
+
+// Refresh
+const refresh = (req, res) => {
+
+}
 
 // Login
 const login = async (req, res) => {
@@ -34,8 +40,8 @@ const signup = async (req, res) => {
   }
 };
 
-const signout = async (req, res) => {
+const logout = async (req, res) => {
     console.log("Signout function not implemented")
 }
 
-module.exports = { login, signup, signout };
+module.exports = { login, signup, logout, refresh };

@@ -14,6 +14,7 @@ This is a list of features integrated in the Mern boilerplate
 * Add Testing
 * Make everything in the frontend fully responsive
 * Add authorization based on roles
+* Add an Eventlogger and errorLogger in the backend 
 
 #### Implemented
 ##### Frontend
@@ -38,6 +39,8 @@ The following steps explain how to get the boilerplate running on your local mac
 The following steps explain how to deploy the MERN app
 
 #### Create a new branch in your repository and name it "production"
+#### Add you Domain name to allowedCors
+#### remove the line "!origin" from corsOptions 
 
 #### (optional) Set up CI/CD pipeline in github
 

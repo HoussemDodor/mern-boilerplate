@@ -16,7 +16,12 @@ const Navbar = () => {
         <div className="flex items-center justify-center">
           {user ? (
             <>
-              <Link to="/account" className="py-3 px-5 hover:scale-110 duration-300">{user.email}</Link>
+              <Link to="/account">
+                <button className="flex items-center hover:scale-110 duration-300">
+                  <img className="w-8 h-8 rounded-full" src={user.profilePicture} alt="ProfilePicture"/>
+                  <span className="py-3 pr-5 pl-2">{user.email}</span>
+                </button>
+              </Link>
               <button className="" onClick={logout}>
                 <ArrowLeftStartOnRectangleIcon className="size-6 text-gray-800 hover:scale-110 duration-300" />
               </button>

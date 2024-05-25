@@ -8,7 +8,7 @@ const createToken = (_id) => {
 
 // Refresh
 const refresh = (req, res) => {
-
+  console.log("Refresh Method not yet implemented")
 }
 
 // Login
@@ -18,7 +18,7 @@ const login = async (req, res) => {
   try {
     const user = await User.login(email, password)
     const acces_token = createToken(user._id)
-    res.status(200).json({email: user.email, acces_token, role: user.role})
+    res.status(200).json({email: user.email, acces_token, role: user.role, profilePicture: user.profilePicture})
   } catch (error) {
     res.status(400).json({error: error.message})
   }

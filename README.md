@@ -32,10 +32,17 @@ This is a list of features integrated into the MERN boilerplate:
 ## How to Set Up
 The following steps explain how to get the boilerplate running on your local machine and start developing:
 
-1. **Clone and connect your own repository**
-2. **Run `npm install`**
-3. **Add `.env` file**
-4. **Name your project**
+1. Clone to your own pc
+2. Rename the folder
+3. Create a git repository and
+4. Connect your own repository using `git remote set-url origin git://new.url.here`
+5. Push the Boilerplate to your remote git by running `git add *`, `git commit -m "initial commit"`, and finally `git push`
+6. Add your **`.env` file** and add the following variables
+    * `PORT=` Whatever port you want your backend to run on
+    * `MONGO_URI=` The connection string to your MongoDB database
+    * `ACCES_TOKEN_SECRET=` The secret which will be used to sign your JWT tokens
+7. Open a terminal and `cd` to the frontend and backend. Run `npm install` in both.
+8. In the terminal use `npm start` while in the frontend to start the frontend and `npm run dev` in the backend to run the backend
 
 ## How to Deploy the MERN App
 The following steps explain how to deploy the MERN app:

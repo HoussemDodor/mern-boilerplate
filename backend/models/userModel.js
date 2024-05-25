@@ -19,7 +19,12 @@ const userSchema = new Schema(
       type: String,
       required: true,
       default: "user",
-    }
+    },
+    profilePicture: {
+      type: String,
+      default:
+        "https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg",
+    },
   },
   { timestamps: true }
 );
@@ -46,7 +51,7 @@ userSchema.statics.signup = async function (email, password) {
   const salt = await bcrypt.genSalt(10);
   const hash = await bcrypt.hash(password, salt);
 
-  const user = await this.create({ email, password: hash });
+  const user = await this.create({ email, password: hash }); // TODO: Handle possible error
 
   return user;
 };
@@ -60,7 +65,7 @@ userSchema.statics.login = async function (email, password) {
   if (!email || !password) throw Error("All fields must be filled");
 
   //check if user exists
-  const user = await this.findOne({ email });
+  const user = await this.findOne({ email }); // TODO: Handle Possible Error
   if (!user) throw Error("Incorrect email");
 
   //check if password matches
